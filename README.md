@@ -1,7 +1,7 @@
 # Pre-Requisites
 
-    1. Python install properly
-    2. Environment vairable created to access in Terminal, CMD etc.
+    1. Python installed properly
+    2. Environment variables created to access in Terminal, CMD, etc.
 
 # Steps to Execute Source Code
 
