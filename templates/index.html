@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Bill Finder</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1 align="center">Information Extractor from Utility Bills</h1>
+        <div class="container">
+            <div class="row">
+                <h2>Select a file to upload</h2>
+                <form method="post" action="/" enctype="multipart/form-data">
+                    <dl>
+                        <p>
+                            <input type="file" name="file" class="form-control" autocomplete="off" required>
+                        </p>
+                        <h3>Select output format</h3>
+                        <p>
+                            <input style="margin-left: 15px;" type="radio" name="format" value="csv" checked> CSV
+                            <br>
+                            <input style="margin-left: 15px;" type="radio" name="format" value="txt"> TXT
+                            <br>
+                            <input style="margin-left: 15px;" type="radio" name="format" value="json"> JSON
+                        </p>
+                    </dl>
+                    <p><input type="submit" value="Submit" class="btn btn-info"></p>
+                </form>
+                <p>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <ul>
+                                {% for message in messages %}
+                                <li>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endwith %}
+                </p>
+                {% if filename %}
+                    <div style="justify-content: center; text-align: center;">
+                        <img src="{{ url_for('display_image', filename=filename) }}" style="max-width: 500px; max-height: 500px;"/>
+                    </div>
+                    <br>
+                    <div style="margin-top: 20px; text-align: left;">
+                        <h3>Download the output</h3>
+                        {% if download_link %}
+                            <a href="{{ download_link }}" class="btn btn-info" download>Download Result</a>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                <br>
+                <br>
+            </div>
+        </div>
+    </body>
+</html>

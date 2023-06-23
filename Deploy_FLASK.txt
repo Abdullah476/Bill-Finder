@@ -1,0 +1,2 @@
+Use the link below to Deploy the provided FLASK application:
+	https://flask.palletsprojects.com/en/2.3.x/tutorial/deploy/
