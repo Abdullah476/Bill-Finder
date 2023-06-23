@@ -16,7 +16,6 @@
     7. It will take few seconds and will display the image you inserted, along with the Output for downloading
     8. Click on the button named "Download Result" to get the output
 
-Enjoy using the App!
 
 # Using Docker
 
@@ -24,3 +23,5 @@ Enjoy using the App!
     1. Extract the source code
     2. Place the Dockerfile, Makefile, requirements.txt in the source code folder
     3. Open the terminal and use "Docker build" && "Docker run" commands to run the container of the Application
+
+Enjoy using the App!
