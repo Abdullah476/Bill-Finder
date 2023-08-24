@@ -1,5 +1,5 @@
 flask 
-pacy 
+spacy 
 io
 json
 os
